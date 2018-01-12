@@ -2,17 +2,18 @@
 html,
 body {
 	height: 100%;
-}
+}*/
 * {
 	box-sizing: border-box;
 }
 body {
-	font-family: 'Comfortaa', cursive;
+	font: normal 300 1em 'Comfortaa', cursive;
+	/* font-family: 'Comfortaa', cursive;
 	font-weight: 300;
-	line-height: 1.1;
-	color: #fff;
+	line-height: 1.1; */
+	/*color: #fff;
 	background-color: #513B56;
-	background-image: linear-gradient(to bottom, transparent, #525174);
+	background-image: linear-gradient(to bottom, transparent, #525174);*/
 }
 img {
 	max-width: 100%;
@@ -23,8 +24,9 @@ a {
 hr {
 	border: none;
 	border-top: 1px solid #525174;
+	margin-bottom: 2em;
 }
-.color-featured { 
+/* .color-featured { 
 	color: rgba(188, 231, 132, 1);
 }
 .bg-color-featured {
@@ -65,40 +67,35 @@ hr {
 }
 .bg-color-white {
 	background-color: rgba(255, 255, 255, 1);
-}
+} */
 header {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
 header img {
-	margin: 1rem;
-	min-height: 5rem;
-	min-width: 5rem;
+	margin: 1em;
+	min-height: 5em;
+	min-width: 5em;
 }
 .tagline {
-	margin: 1rem;
+	margin: 1em;
 }
 h1 {
 	margin-bottom: 0;
-	
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	font-weight: 700;
 	color: #348AA7;
 }
 h2 {
 	text-transform: lowercase;
-
-	font-size: 1.1rem;
+	font-size: 1.1em;
 	color: #5DD39E;
-}
-main {
-	display: flex;
 }
 article {
 	width: 100%;
 }
-aside {
+/* aside {
 	order: -1;
 	position: absolute;
 	left: 0;
@@ -106,7 +103,7 @@ aside {
 	transform: translate(-300px,0);
 	transition: ease 0.3s;
 
-	padding: 1rem;
+	padding: 1em;
 
 	width: 160px;
 	background-color: #fff;
@@ -117,8 +114,8 @@ aside.open {
 	transform: translate(0,0);
 }
 aside h4 {
-	font-size: .6rem;
-	margin-bottom: 1rem;
+	font-size: .6em;
+	margin-bottom: 1em;
 }
 ul {
 	display: flex;
@@ -131,32 +128,102 @@ ul li {
 }
 ul li div {
 	width: 100%;
-	padding: 0.5rem;
+	padding: 0.5em;
 }
 ul li div:last-of-type {
 	border: 1px solid #000;
-}
-.projects {
+} */
+.projetos {
 	display: flex;
 	flex-wrap: wrap;
-	width: 100vw;
 }
-h3,
+.projeto-hero {
+	width: 100%;
+	display: flex;
+	/* flex-wrap: wrap; */
+	align-items: center;
+	margin-bottom: 2em;
+}
+.projeto-hero h2 {
+	font-size: 2.5em;
+	font-weight: 700;
+}
+.projeto-hero p {
+	font-size: 2em;
+}
+.projeto-hero img,
+.projeto-hero .projeto-descricao {
+	width: 50%;
+}
+.projeto-descricao {
+	padding: 2em;
+}
+.projetos a {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+}
+.projetos small {
+	font-size: 80%;
+}
+/* h3,
 figure {
-	padding: 1rem 0;
+	padding: 1em 0;
 	margin: 0 auto;
-}
+} */
 figcaption {
-	font-size: 0.8rem;
-	padding-left: 1rem;
+	font-size: 0.8em;
+	padding-left: 1em;
 }
-footer p {
-	margin: 1rem 0;
+/* footer p {
+	margin: 1em 0;
 	text-align: center;
-	font-size: 0.8rem;
-}
+	font-size: 0.8em;
+} */
 @media screen and (max-width: 767px) {
+	header,
+	main {
+		margin: 0;
+		width: 100%;
+	}
 	header {
+		display: flex;
+		flex-flow: column;
+		margin: 0;
+		text-align: center;
+	}
+	header img {
+		margin: 1em;
+		height: 1em;
+		width: 1em;
+	}
+	.projetos {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.projeto-hero {
+		flex-wrap: wrap;
+	}
+	.projeto,
+	.projeto-hero img,
+	.projeto-hero .projeto-descricao {
+		width: 100%;
+	}
+	/* .projeto img,
+	.projeto-hero img {
+		width: 100vw;
+	} */
+	.projeto-hero h2 {
+		font-size: 3vh;
+		font-weight: 700;
+	}
+	.projeto-hero p {
+		font-size: 3vh;
+	}
+	/* header {
 		display: flex;
 		justify-content: center;
 	}
@@ -172,17 +239,58 @@ footer p {
 	}
 	figcaption small {
 		display: block;
-		margin: 0.5rem;
-	}
+		margin: 0.5em;
+	} */
 }
 @media screen and (min-width: 768px) {
-	figure {
-		width: 50vw;
+	header,
+	main {
+		margin: 0;
+		width: 100%;
+	}
+	.projetos {
+		flex-direction: column;
+	}
+	.projeto {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	.projeto img,
+	.projeto .projeto-descricao {
+		width: 50%;
+	}
+	.projeto-hero h2 {
+		font-size: 2vh;
+		font-weight: 700;
+	}
+	.projeto-hero p {
+		font-size: 2vh;
 	}
 }
 @media screen and (min-width: 1280px) {
-	figure {
-		width: 25vw;
+	header,
+	main {
+		display: flex;
+		width: 960px;
+		margin: 0 auto;
+	}
+	.projetos {
+		flex-direction: row;
+	}
+	.projeto {
+		flex-direction: column;
+		width: calc(100%/3);
+	}
+	.projeto img,
+	.projeto .projeto-descricao {
+		width: 100%;
+	}
+	.projeto-hero h2 {
+		font-size: 2vh;
+		font-weight: 700;
+	}
+	.projeto-hero p {
+		font-size: 2vh;
 	}
 }
-*/
